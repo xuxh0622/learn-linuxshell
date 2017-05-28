@@ -72,12 +72,15 @@
 > 添加目录，会复制/etc/skel目录到/home目录下，生成用户目录。
 
 ```bash
-[**@** /]$ sudo useradd -m test #新建用户账户，通过sudo用root权限运行
+[**@** /]$ sudo useradd -m test #新建用户账户，通过sudo用root权限运行,-m创建home文件
+[**@** /]$ visudo  #如果用户没有sudo权限，编辑文档在ALLOW root to run any下面添加tomcat ALL=(ALL) ALL然后保存
 [**@** /]$ userdel -r test #删除用户，同事删除HOME和mail目录
 [**@** /]$ passwd test #修改密码
 [**@** /]$ groupadd shared #创建用户组
 [**@** /]$ usermod -G shared test #把用户添加到分组
 [**@** /]$ groupmod -n sharing shared #修改组名
+[**@** /]$ groups  #查看当前用户组
+[**@** /]$ groups tomcat  #查看tomcat用户组
 ```
 > 文件权限设置，文件读、写（编辑和删除）、执行权限，目录读（列出目录文件）、写（目录下创建和删除文件）、执行（搜索和进入目录）。
 
