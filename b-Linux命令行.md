@@ -36,7 +36,7 @@
 > 进程、磁盘信息查看
 
 ```bash
-[**@** /]$ ps -ef #查看所有进程
+[**@** /]$ ps -ef | grep java/zookeeper/tomcat #查看java或tomcat或zookeeper进程
 [**@** /]$ kill 1122 #通过PID删除进程
 [**@** /]$ killall http* #通过进程名删除进程，适用过滤器
 [**@** /]$ mount #输出挂载媒体

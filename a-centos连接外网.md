@@ -7,5 +7,6 @@ ONBOOT=yes　　#系统启动时是否自动加载
 [**@** /]$ service network restart  #重启网卡
 [**@** /]$ ifconfig  #查看ip地址
 [**@** /]$ ping www.baidu.com  #查看是否连接外网
+[admin * *] ssh -l admin 127.0.0.1  #访问远程服务
 ```
 
